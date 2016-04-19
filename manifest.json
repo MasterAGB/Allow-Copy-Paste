@@ -1,0 +1,40 @@
+{
+    "content_scripts":[
+        {
+            "js":["jquery.1.4.2.min.js", "allowcopypaste.js"],
+            "matches":[ "http://*/*", "https://*/*"],
+            "run_at":"document_end"
+        },
+        {
+            "js":["allowcopypaste_lyricsfreak.js"],
+            "matches":[ "http://www.lyricsfreak.com/*" ],
+            "run_at":"document_end"
+        },
+        {
+            "js":["allowcopypaste_asklaila.js"],
+            "matches":[ "http://www.asklaila.com/*" ],
+            "run_at":"document_end"
+        },
+        {
+            "js":["jquery.1.4.2.min.js", "pic.js"],
+            "matches":[ "file://*/*", "http://*/*"],
+            "run_at":"document_end"
+        }
+    ],
+    "description":"Allow copy-paste action on websites.",
+    "icons":{
+        "16":"icon-16x16.png",
+        "32":"icon-32x32.png",
+        "48":"icon-48x48.png",
+        "128":"icon-128x128.png",
+        "256":"icon-256x256.png"
+    },
+    "name":"Allow copy-paste action on websites.",
+    "permissions":[ "tabs" ],
+    "version":"0.958",
+    "web_accessible_resources": [
+       "inbox.css"
+        ],
+    "content_security_policy":"script-src 'self' https://connect.facebook.net https://apis.google.com https://platform.twitter.com; object-src 'self'",
+    "manifest_version":2
+}
