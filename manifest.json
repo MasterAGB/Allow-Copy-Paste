@@ -2,7 +2,7 @@
     "content_scripts":[
         {
             "js":["jquery.1.4.2.min.js", "allowcopypaste.js"],
-            "matches":[ "http://*/*", "https://*/*"],
+            "matches":[ "http://*/*", "https://*/*", "file://*/*"],
             "run_at":"document_end"
         },
         {
@@ -13,11 +13,6 @@
         {
             "js":["allowcopypaste_asklaila.js"],
             "matches":[ "http://www.asklaila.com/*" ],
-            "run_at":"document_end"
-        },
-        {
-            "js":["jquery.1.4.2.min.js", "pic.js"],
-            "matches":[ "file://*/*", "http://*/*"],
             "run_at":"document_end"
         }
     ],
@@ -30,11 +25,9 @@
         "256":"icon-256x256.png"
     },
     "name":"Allow copy-paste action on websites.",
+    "short_name":"Allow copy",
     "permissions":[ "tabs" ],
-    "version":"0.958",
-    "web_accessible_resources": [
-       "inbox.css"
-        ],
+    "version":"0.96",
     "content_security_policy":"script-src 'self' https://connect.facebook.net https://apis.google.com https://platform.twitter.com; object-src 'self'",
     "manifest_version":2
 }
